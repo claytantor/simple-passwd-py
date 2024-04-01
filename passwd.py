@@ -108,7 +108,7 @@ def decrypt(password, input):
     # delete the original db
     os.remove(input)
 
-    click.echo("Decrypted file saved at %s" % input + ".enc")
+    click.echo("Decrypted file saved at %s" % input.replace('.enc', ''))
 
 @cli.command()
 @click.option('--title', prompt='title to find',
